@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "801751292286",
+    "project_id": "satron-da80a",
+    "storage_bucket": "satron-da80a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801751292286:android:d8b48b4414253561867b2f",
+        "android_client_info": {
+          "package_name": "apu.kingsley.satron"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQVMdaIJDXgQ0WzwuSOSo1IVF4Tyb4LYY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
