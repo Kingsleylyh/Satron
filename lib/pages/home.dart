@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:satron/features/schedule/schedule_home.dart';
+import 'package:satron/features/map/map_home.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -51,7 +52,12 @@ class Homepage extends StatelessWidget {
                 ),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const MapPage()),
+                  );
+                },
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
