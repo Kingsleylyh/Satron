@@ -9,10 +9,24 @@ import 'features/map/map_home.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await dotenv.load();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+
+  // Load .env file with error handling
+  try {
+    await dotenv.load(fileName: ".env");
+    print(".env file loaded successfully");
+  } catch (e) {
+    print("Error loading .env file: $e");
+  }
+
+  // Initialize Firebase with error handling
+  try {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+    print("Firebase initialized successfully");
+  } catch (e) {
+    print("Firebase initialization failed: $e");
+  }
 
   runApp(const MyApp());
 }
@@ -24,7 +38,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-
       title: "Flutter Application",
       home: SplashScreen(child: LoginPage()),
     );

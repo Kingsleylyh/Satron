@@ -1,1 +1,0 @@
-// External API for bus/train schedules
