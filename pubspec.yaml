@@ -16,6 +16,10 @@ dependencies:
   # env
   flutter_dotenv: ^5.1.0
 
+  cloud_firestore:
+  firebase_auth:
+  firebase_storage:
+
   # protobuf format
   protobuf: ^4.0.0
   fixnum: ^1.1.1

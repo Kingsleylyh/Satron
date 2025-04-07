@@ -1,11 +1,13 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:satron/pages/home.dart';
+import 'package:satron/features/app/splash_screen/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:satron/pages/user_auth/login.dart';
 import 'firebase_options.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'features/map/map_home.dart';
 
-void main() async{
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // Load .env file with error handling
@@ -36,8 +38,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Homepage()
+      title: "Flutter Application",
+      home: SplashScreen(child: LoginPage()),
     );
   }
 }
+
+
+
