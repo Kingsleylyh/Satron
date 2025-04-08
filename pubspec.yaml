@@ -10,15 +10,14 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
 
-  # Firebase core
-  firebase_core: ^3.12.0
+  # Firebase
+  firebase_core: ^2.32.0
+  firebase_auth: ^4.19.1
+  cloud_firestore: ^4.17.5
+  shared_preferences: ^2.2.2
 
   # env
   flutter_dotenv: ^5.1.0
-
-  cloud_firestore:
-  firebase_auth:
-  firebase_storage:
 
   # protobuf format
   protobuf: ^4.0.0
@@ -43,7 +42,6 @@ flutter:
   uses-material-design: true
   assets:
     - .env
-    -
 
   fonts:
     - family: Poppins

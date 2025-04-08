@@ -1,87 +1,98 @@
 import 'package:flutter/material.dart';
 import 'package:satron/pages/authformwidget/form_container_widget.dart';
-import 'package:satron/pages/home.dart';
+import 'package:satron/features/schedule/schedule_home.dart';
 import 'package:satron/pages/user_auth/register.dart';
+import 'package:satron/service/firebase_auth_implementation/firebase_auth_services.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  final FirebaseAuthService _auth = FirebaseAuthService();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  bool _isLoading = false;
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFF5E1DA),
       appBar: AppBar(
-          title: Text("User Login")
+        title: const Text("User Login"),
+        backgroundColor: const Color(0xFFE6B89C),
       ),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15),
+          padding: const EdgeInsets.symmetric(horizontal:  15),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 "Login",
                 style: TextStyle(fontSize: 27, fontWeight: FontWeight.bold),
               ),
-              SizedBox(
-                  height: 30
-              ),
+              const SizedBox(height: 30),
               FormContainerWidget(
+                controller: _emailController,
                 hintText: "Email",
-                inputType: TextInputType.emailAddress,
-                controller: TextEditingController(),
                 isPasswordField: false,
+                inputType: TextInputType.emailAddress,
               ),
-              SizedBox(
-                height: 10,
-              ),
+              const SizedBox(height: 10),
               FormContainerWidget(
+                controller: _passwordController,
                 hintText: "Password",
-                inputType: TextInputType.visiblePassword,
-                controller: TextEditingController(),
                 isPasswordField: true,
+                inputType: TextInputType.visiblePassword,
               ),
-              SizedBox(height: 30,),
+              const SizedBox(height: 30),
               GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
-                },
+                onTap: _login,
                 child: Container(
                   width: double.infinity,
                   height: 50,
                   decoration: BoxDecoration(
                     color: Colors.blue,
-                    borderRadius: BorderRadius.circular(10)
+                    borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(
-                    child: Text(
+                    child: _isLoading
+                        ? const CircularProgressIndicator(color: Colors.white)
+                        : const Text(
                       "Login",
-                      style: TextStyle(
-                        color: Colors.white,
-                      )
-                    )
-                  )
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
                 ),
               ),
-              SizedBox(
-                height: 20,
-              ),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Don't have an account?"),
-                  SizedBox(
-                    width: 5,
-                  ),
+                  const Text("No Account？"),
+                  const SizedBox(width: 5),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushAndRemoveUntil(
+                      Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => RegistrationPage()),
-                            (route) => false,
+                        MaterialPageRoute(
+                          builder: (context) => const RegistrationPage(),
+                        ),
                       );
                     },
-                    child: Text(
-                      "Sign Up",
+                    child: const Text(
+                      "Register Now",
                       style: TextStyle(
                         color: Colors.blue,
                         fontWeight: FontWeight.bold,
@@ -91,9 +102,34 @@ class LoginPage extends StatelessWidget {
                 ],
               ),
             ],
-        ),
+          ),
         ),
       ),
     );
+  }
+
+  Future<void> _login() async {
+    setState(() => _isLoading = true);
+
+    try {
+      final user = await _auth.signInWithEmailAndPassword(
+        _emailController.text.trim(),
+        _passwordController.text.trim(),
+      );
+
+      if (user != null) {
+        Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (context) => const ScheduleHome()),
+              (route) => false,
+        );
+      }
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(e.toString())),
+      );
+    } finally {
+      setState(() => _isLoading = false);
+    }
   }
 }

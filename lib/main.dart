@@ -1,32 +1,22 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:satron/features/app/splash_screen/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:satron/features/schedule/schedule_home.dart';
 import 'package:satron/pages/user_auth/login.dart';
+import 'package:satron/pages/user_auth/register.dart';
 import 'firebase_options.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'features/map/map_home.dart';
+import 'package:satron/features/app/splash_screen/splash_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Load .env file with error handling
-  try {
-    await dotenv.load(fileName: ".env");
-    print(".env file loaded successfully");
-  } catch (e) {
-    print("Error loading .env file: $e");
-  }
+  // 环境变量加载
+  await dotenv.load(fileName:  ".env");
 
-  // Initialize Firebase with error handling
-  try {
-    await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
-    print("Firebase initialized successfully");
-  } catch (e) {
-    print("Firebase initialization failed: $e");
-  }
+  // Firebase 初始化
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   runApp(const MyApp());
 }
@@ -34,15 +24,25 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: "Flutter Application",
-      home: SplashScreen(child: LoginPage()),
+    return MaterialApp(
+      title: "Satron App - 2025",
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      // 将SplashScreen设为首页，3秒后跳转到登录页
+      home: SplashScreen(
+        child: LoginPage(),
+      ),
+      routes: {
+        '/login': (context) => const LoginPage(),
+        '/register': (context) => const RegistrationPage(),
+        '/home': (context) => const ScheduleHome(),
+      },
     );
   }
 }
-
-
 
