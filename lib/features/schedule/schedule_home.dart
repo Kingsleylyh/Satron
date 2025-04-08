@@ -140,6 +140,40 @@ class _ScheduleHomeBody extends StatelessWidget {
           ),
         ],
       ),
+
+      // 底部导航栏 (高级灰设计)
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          color: Colors.grey[50],
+          border: Border(top: BorderSide(color: Colors.grey[200]!,  width: 1)),
+        ),
+        padding: EdgeInsets.only(bottom:  MediaQuery.of(context).padding.bottom),
+        child: BottomNavigationBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          selectedItemColor: Colors.grey[800],
+          unselectedItemColor: Colors.grey[500],
+          selectedLabelStyle: TextStyle(fontWeight: FontWeight.w500),
+          type: BottomNavigationBarType.fixed,
+          onTap: (index) => _navigateToPage(context, index),
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.book_outlined),
+              activeIcon: Icon(Icons.book),
+              label: "Booking",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.map_outlined),
+              activeIcon: Icon(Icons.map),
+              label: "Map",
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
+
+
+
+
