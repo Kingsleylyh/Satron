@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class FormContainerWidget extends StatefulWidget {
 
   final TextEditingController? controller;
@@ -27,7 +26,6 @@ class FormContainerWidget extends StatefulWidget {
     this.inputType
   });
 
-
   @override
   _FormContainerWidgetState createState() => new _FormContainerWidgetState();
 }
@@ -35,7 +33,6 @@ class FormContainerWidget extends StatefulWidget {
 class _FormContainerWidgetState extends State<FormContainerWidget> {
 
   bool _obscureText = true;
-
 
   @override
   Widget build(BuildContext context) {

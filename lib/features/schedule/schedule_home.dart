@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:satron/features/schedule/bus_schedule.dart';
 import 'package:satron/features/schedule/train_schedule.dart';
-import 'package:satron/pages/home.dart';
 import 'package:satron/features/booking/booking_home.dart';
 import 'package:satron/features/map/map_home.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 // Entry page for schedules (bus/ train)
 
@@ -141,10 +141,8 @@ class ScheduleHome extends StatelessWidget {
 
   void _navigateToPage(BuildContext context, int index) {
     if (index == 0) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => Homepage()));
-    } else if (index == 1) {
       Navigator.push(context, MaterialPageRoute(builder: (context) => BookingPage()));
-    }else if (index == 2){
+    } else if (index == 1) {
       Navigator.push(context, MaterialPageRoute(builder: (context) => MapPage()));
     }
   }
@@ -154,8 +152,17 @@ class ScheduleHome extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xFFF5E1DA),
       appBar: AppBar(
-        title: const Text("Schedule Home"),
-        backgroundColor: Color(0xFFE6B89C),
+        title: const Text("Home Page"),
+        backgroundColor: const Color(0xFFE6B89C),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: () async {
+              await FirebaseAuth.instance.signOut();
+              Navigator.pushReplacementNamed(context,  '/login');
+            },
+          ),
+        ],
       ),
 
       body: SingleChildScrollView(
@@ -232,7 +239,6 @@ class ScheduleHome extends StatelessWidget {
         unselectedItemColor: Colors.grey[700],
         onTap: (index) => _navigateToPage(context, index),
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.book), label: "Booking"),
           BottomNavigationBarItem(icon: Icon(Icons.map), label: "Map"),
         ],
