@@ -39,17 +39,17 @@ class FirebaseAuthService {
   String _handleAuthError(String code) {
     switch (code) {
       case 'invalid-email':
-        return '邮箱格式错误';
+        return 'Invalid Email';
       case 'user-disabled':
-        return '账户已禁用';
+        return 'User Disabled';
       case 'user-not-found':
-        return '用户不存在';
+        return 'User Not Exist';
       case 'wrong-password':
-        return '密码错误';
+        return 'Incorrect Password';
       case 'email-already-in-use':
-        return '邮箱已被注册';
+        return 'Email Already In-Use';
       default:
-        return '操作失败 [$code]';
+        return 'Execution Failed [$code]';
     }
   }
 }

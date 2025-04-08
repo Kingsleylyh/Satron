@@ -27,81 +27,84 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF5E1DA),
-      appBar: AppBar(
-        title: const Text("User Login"),
-        backgroundColor: const Color(0xFFE6B89C),
-      ),
+      backgroundColor: Color(0xFFE4E4E4),
       body: Center(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal:  15),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text(
-                "Login",
-                style: TextStyle(fontSize: 27, fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 30),
-              FormContainerWidget(
-                controller: _emailController,
-                hintText: "Email",
-                isPasswordField: false,
-                inputType: TextInputType.emailAddress,
-              ),
-              const SizedBox(height: 10),
-              FormContainerWidget(
-                controller: _passwordController,
-                hintText: "Password",
-                isPasswordField: true,
-                inputType: TextInputType.visiblePassword,
-              ),
-              const SizedBox(height: 30),
-              GestureDetector(
-                onTap: _login,
-                child: Container(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal:  15),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  "LOGIN",
+                  style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 2.0,
+                  ),
+                ),
+                const SizedBox(height: 40),
+                FormContainerWidget(
+                  controller: _emailController,
+                  hintText: "Email",
+                  isPasswordField: false,
+                  inputType: TextInputType.emailAddress,
+                ),
+                const SizedBox(height: 20),
+                FormContainerWidget(
+                  controller: _passwordController,
+                  hintText: "Password",
+                  isPasswordField: true,
+                  inputType: TextInputType.visiblePassword,
+                ),
+                const SizedBox(height: 40),
+                SizedBox(
                   width: double.infinity,
                   height: 50,
-                  decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Center(
+                  child: ElevatedButton(
+                    onPressed: _isLoading ? null : _login,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.grey[800],  // 深灰色按钮
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      elevation: 5,
+                    ),
                     child: _isLoading
                         ? const CircularProgressIndicator(color: Colors.white)
                         : const Text(
-                      "Login",
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text("No Account？"),
-                  const SizedBox(width: 5),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const RegistrationPage(),
-                        ),
-                      );
-                    },
-                    child: const Text(
-                      "Register Now",
+                      "LOGIN",
                       style: TextStyle(
-                        color: Colors.blue,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                ],
-              ),
-            ],
+                ),
+                const SizedBox(height: 30),
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const RegistrationPage(),
+                      ),
+                    );
+                  },
+                  style: TextButton.styleFrom(
+                    foregroundColor: Colors.black87,
+                  ),
+                  child: const Text(
+                    "No Account? Register Now",
+                    style: TextStyle(
+                      fontSize: 16,
+                      decoration: TextDecoration.underline,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
