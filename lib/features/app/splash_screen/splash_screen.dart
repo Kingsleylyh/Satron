@@ -9,7 +9,6 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   @override
   void initState() {
     Future.delayed(
@@ -23,11 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF5E1DA),
-      appBar: AppBar(
-        title: const Text("User Login"),
-        backgroundColor: const Color(0xFFE6B89C),
-      ),
+      backgroundColor: Colors.white,
       body: Center(
         child: Text(
           "Welcome to Satron",

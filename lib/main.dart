@@ -33,10 +33,12 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+
       // 将SplashScreen设为首页，3秒后跳转到登录页
       home: SplashScreen(
         child: LoginPage(),
       ),
+
       routes: {
         '/login': (context) => const LoginPage(),
         '/register': (context) => const RegistrationPage(),
