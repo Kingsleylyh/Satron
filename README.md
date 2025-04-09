@@ -40,19 +40,19 @@ Step 3: And so on...
 
 🏆 Hackathon Goals
 What problem does your app solve for Kitahack?
-  It helps with solving Sustainable Developmental Goals
+  It helps in solving Sustainable Developmental Goals
 
 How does it align with the hackathon's themes?
 
 
 👥 Team Members
-[Your Name](GitHub Profile Link) - Role
+[Kingsley](https://github.com/Kingsleylyh)
 
-[Teammate 1](GitHub Profile Link) - Role
+[How Yong Heng](https://github.com/howyongheng0313) 
 
-[Teammate 2](GitHub Profile Link) - Role
+[Nicholas Pang Tze Shen](https://github.com/Fraxtal)
 
-[Teammate 3](GitHub Profile Link) - Role
+[Wang Liang Xuan](https://github.com/ItsLiang62)
 
 📜 License
 This project is licensed under the MIT License (or any other license you prefer).
