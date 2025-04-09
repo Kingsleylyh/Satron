@@ -10,8 +10,8 @@ Revolutionizing urban mobility with a centralized app. Your all-in-one solution 
 ## 🛠 Technologies Used
 - **Flutter** 
 - **Firebase** (Authentication/Firestore/etc.)
+- **Open Street Map**: Mapping Visualizer
 - **Other Packages**: http, provider, etc.
-- **APIs**: List any third-party APIs used
 
 ## 🔧 Installation
 1. Clone the repository:
