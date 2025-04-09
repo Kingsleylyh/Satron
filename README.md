@@ -5,12 +5,7 @@
 *A simple mapping application that combines the public transportation services in Malaysia and puts it all into one application.*
 
 ## 🌟 Overview
-A short description (2-3 sentences) explaining what your app does and the problem it solves. Mention if it's for education, healthcare, finance, etc.
-
-## ✨ Features
-- **Feature 1**: Brief description
-- **Feature 2**: Brief description  
-- **Feature 3**: Brief description  
+A simple mapping application that combines the public transportation services in Malaysia and puts it all into one application. 
 
 ## 🛠 Technologies Used
 - **Flutter** 
@@ -30,13 +25,6 @@ A short description (2-3 sentences) explaining what your app does and the proble
 3. Run App:
    ```bash
    flutter run
-
-🚀 How to Use
-Step 1: Describe the first step to use the app
-
-Step 2: Describe the next step
-
-Step 3: And so on...
 
 🏆 Hackathon Goals
 What problem does your app solve for Kitahack?
