@@ -8,7 +8,8 @@
 Revolutionizing urban mobility with a centralized app. Your all-in-one solution for seamless navigation, payments, and bookings across Malaysia's transportation network!
 
 ## 🛠 Technologies Used
-- **Flutter** 
+- **Flutter**
+- **Flutter Map**
 - **Firebase** (Authentication/Firestore/etc.)
 - **Open Street Map**: Mapping Visualizer
 - **Other Packages**: http, provider, etc.
