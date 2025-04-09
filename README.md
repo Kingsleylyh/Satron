@@ -1,11 +1,11 @@
-# Kitahack Hackathon - Flutter Application
+![image](https://github.com/user-attachments/assets/26f866f0-874e-4095-8fe8-95860942c275)# Kitahack Hackathon - Flutter Application
 
 ## 📌 Satron Mapping Application
 **Map For Malaysians**  
 *A simple mapping application that combines the public transportation services in Malaysia and puts it all into one application.*
 
 ## 🌟 Overview
-A simple mapping application that combines the public transportation services in Malaysia and puts it all into one application. 
+Revolutionizing urban mobility with a centralized app. Your all-in-one solution for seamless navigation, payments, and bookings across Malaysia's transportation network!
 
 ## 🛠 Technologies Used
 - **Flutter** 
@@ -27,11 +27,20 @@ A simple mapping application that combines the public transportation services in
    flutter run
 
 🏆 Hackathon Goals
-What problem does your app solve for Kitahack?
-  It helps in solving Sustainable Developmental Goals
+What challenges does your app solve?
+- Commute Frustrations - Daily Frunstrations when commuting around Malaysia
+  
+- Time Loss - Fragmented systems lead to significant waste of time.
+  
+- Lack of Information - No real-time, integrated transportation data.
 
 How does it align with the hackathon's themes?
+   The theme of the hackathon is to solve problem statement related to the 17 Sustainable Development Goals.
 
+Which of the 17 Sustainable Developmental Goals does the app solve?
+   SDG 8: Decent Work and Economic Growth
+   SDG 9: Industry, Innovation, and Infrastructure
+   SDG 11: Sustainable Cities and Communities
 
 👥 Team Members
 
