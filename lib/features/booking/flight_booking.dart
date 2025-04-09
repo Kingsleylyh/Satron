@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class TrainBooking extends StatefulWidget {
-  const TrainBooking({super.key});
+class FlightBooking extends StatefulWidget {
+  const FlightBooking({super.key});
 
   @override
-  State<TrainBooking> createState() => _TrainBookingState();
+  State<FlightBooking> createState() => _FlightBookingState();
 }
 
-class _TrainBookingState extends State<TrainBooking> {
+class _FlightBookingState extends State<FlightBooking> {
   final _formKey = GlobalKey<FormState>();
-  final TextEditingController _trainIdController = TextEditingController();
+  final TextEditingController _flightIdController = TextEditingController();
   final TextEditingController _originController = TextEditingController();
   final TextEditingController _destinationController = TextEditingController();
 
@@ -34,7 +34,7 @@ class _TrainBookingState extends State<TrainBooking> {
   void _submitBooking() {
     if (_formKey.currentState!.validate()) {
       final info = '''
-Train ID: ${_trainIdController.text}
+Flight ID: ${_flightIdController.text}
 From: ${_originController.text}
 To: ${_destinationController.text}
 Date: ${_selectedDate?.toLocal().toString().split(' ')[0]}
@@ -43,14 +43,14 @@ Time: ${_selectedTime?.format(context)}
       showDialog(
         context: context,
         builder: (_) => AlertDialog(
-          title: const Text('Train Booking Confirmed'),
+          title: const Text('Flight Booking Confirmed'),
           content: Text(info),
           actions: [
             TextButton(
               onPressed: () {
-                Navigator.of(context).pop();
-                Navigator.of(context).pop();
-              },
+      Navigator.of(context).pop();
+      Navigator.of(context).pop();
+      },
               child: const Text('OK'),
             )
           ],
@@ -67,7 +67,7 @@ Time: ${_selectedTime?.format(context)}
       builder: (context, scrollController) => Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         decoration: const BoxDecoration(
-          color: Color(0xFFF1F8E9),
+          color: Color(0xFFE3F2FD),
           borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
         ),
         child: ListView(
@@ -84,15 +84,15 @@ Time: ${_selectedTime?.format(context)}
                 ),
               ),
             ),
-            Image.asset('assets/images/train.jpg', height: 180, fit: BoxFit.cover),
+            Image.asset('assets/images/flight.jpg', height: 180, fit: BoxFit.cover),
             const SizedBox(height: 16),
             Form(
               key: _formKey,
               child: Column(children: [
                 TextFormField(
-                  controller: _trainIdController,
-                  decoration: const InputDecoration(labelText: 'Train ID', border: OutlineInputBorder()),
-                  validator: (value) => value == null || value.isEmpty ? 'Enter Train ID' : null,
+                  controller: _flightIdController,
+                  decoration: const InputDecoration(labelText: 'Flight ID', border: OutlineInputBorder()),
+                  validator: (value) => value == null || value.isEmpty ? 'Enter Flight ID' : null,
                 ),
                 const SizedBox(height: 10),
                 TextFormField(
@@ -120,7 +120,7 @@ Time: ${_selectedTime?.format(context)}
                   ],
                 ),
                 const SizedBox(height: 20),
-                ElevatedButton(onPressed: _submitBooking, child: const Text('Book Train')),
+                ElevatedButton(onPressed: _submitBooking, child: const Text('Book Flight')),
               ]),
             )
           ],
