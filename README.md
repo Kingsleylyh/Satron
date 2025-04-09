@@ -36,9 +36,12 @@ What challenges does your app solve?
 - Lack of Information - No real-time, integrated transportation data.
 
 How does it align with the hackathon's themes?
+
    The theme of the hackathon is to solve problem statement related to the 17 Sustainable Development Goals.
 
+
 Which of the 17 Sustainable Developmental Goals does the app solve?
+
    SDG 9: Industry, Innovation, and Infrastructure
    
 👥 Team Members
