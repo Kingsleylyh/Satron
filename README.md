@@ -45,7 +45,7 @@ Which of the 17 Sustainable Developmental Goals does the app solve?
 
    **SDG 9: Industry, Innovation, and Infrastructure**
    
-👥 Team Members
+## 👥 Team Members
 
    [Kingsley](https://github.com/Kingsleylyh)
    
