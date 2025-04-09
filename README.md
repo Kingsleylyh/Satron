@@ -46,13 +46,14 @@ How does it align with the hackathon's themes?
 
 
 👥 Team Members
-[Kingsley](https://github.com/Kingsleylyh)
 
-[How Yong Heng](https://github.com/howyongheng0313) 
+   [Kingsley](https://github.com/Kingsleylyh)
 
-[Nicholas Pang Tze Shen](https://github.com/Fraxtal)
+   [How Yong Heng](https://github.com/howyongheng0313) 
 
-[Wang Liang Xuan](https://github.com/ItsLiang62)
+   [Nicholas Pang Tze Shen](https://github.com/Fraxtal)
+
+   [Wang Liang Xuan](https://github.com/ItsLiang62)
 
 📜 License
 This project is licensed under the MIT License (or any other license you prefer).
