@@ -29,21 +29,21 @@ Revolutionizing urban mobility with a centralized app. Your all-in-one solution 
 
 ## 🏆 Hackathon Goals
 
-What challenges does your app solve?
+**What challenges does your app solve?**
 - Commute Frustrations - *Daily Frunstrations when commuting around Malaysia*
   
 - Time Loss - *Fragmented systems lead to significant waste of time.*
   
 - Lack of Information - *No real-time, integrated transportation data.*
 
-How does it align with the hackathon's themes?
+**How does it align with the hackathon's themes?**
 
-   **The theme of the hackathon is to solve problem statement related to the 17 Sustainable Development Goals.**
+The theme of the hackathon is to solve problem statement related to the 17 Sustainable Development Goals.
 
 
-Which of the 17 Sustainable Developmental Goals does the app solve?
+**Which of the 17 Sustainable Developmental Goals does the app solve?**
 
-   **SDG 9: Industry, Innovation, and Infrastructure**
+SDG 9: Industry, Innovation, and Infrastructure
    
 ## 👥 Team Members
 
