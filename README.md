@@ -36,8 +36,11 @@ How does it align with the hackathon's themes?
 👥 Team Members
 
    [Kingsley](https://github.com/Kingsleylyh)
-   [How Yong Heng](https://github.com/howyongheng0313) 
+   
+   [How Yong Heng](https://github.com/howyongheng0313)
+   
    [Nicholas Pang Tze Shen](https://github.com/Fraxtal)
+   
    [Wang Liang Xuan](https://github.com/ItsLiang62)
 
 📜 License
