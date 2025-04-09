@@ -39,10 +39,8 @@ How does it align with the hackathon's themes?
    The theme of the hackathon is to solve problem statement related to the 17 Sustainable Development Goals.
 
 Which of the 17 Sustainable Developmental Goals does the app solve?
-   SDG 8: Decent Work and Economic Growth
    SDG 9: Industry, Innovation, and Infrastructure
-   SDG 11: Sustainable Cities and Communities
-
+   
 👥 Team Members
 
    [Kingsley](https://github.com/Kingsleylyh)
@@ -54,7 +52,9 @@ Which of the 17 Sustainable Developmental Goals does the app solve?
    [Wang Liang Xuan](https://github.com/ItsLiang62)
 
 📜 License
+
 This project is licensed under the MIT License (or any other license you prefer).
 
 🤝 Contributing
+
 Feel free to fork, open issues, or submit PRs if you'd like to improve the project!
