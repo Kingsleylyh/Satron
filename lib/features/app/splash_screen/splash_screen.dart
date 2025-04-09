@@ -33,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [Color(0xFFE6B89C), Color(0xFFF5E1DA)],
+                  colors: [Color(0xFFE4E4E4), Color(0xFFF0F0F0)],
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                 ),
@@ -89,7 +89,7 @@ class ParticlePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final Paint paint = Paint()
-      ..color = Color(0xFFE6B89C).withOpacity(0.2)
+      ..color = Colors.grey
       ..style = PaintingStyle.fill;
 
     final double particleSize = 5.0;
