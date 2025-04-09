@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart'  as http;
+import 'package:http/http.dart' as http;
 import 'package:satron/src/gtfs-realtime.pb.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
-import 'package:geolocator/geolocator.dart'  as geo;
+import 'package:geolocator/geolocator.dart' as geo;
 
 class BusSchedule extends StatefulWidget {
   const BusSchedule({super.key});

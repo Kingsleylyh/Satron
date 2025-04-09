@@ -10,6 +10,7 @@ class ProfilePage extends StatelessWidget {
     final user = FirebaseAuth.instance.currentUser;
 
     return Scaffold(
+      backgroundColor: Color(0xFFE4E4E4),
       body: Center(
         child: user == null
             ? const Text("No user logged in")
@@ -20,7 +21,7 @@ class ProfilePage extends StatelessWidget {
             children: [
               const CircleAvatar(
                 radius: 50,
-                backgroundColor: Colors.brown,
+                backgroundColor: Colors.grey,
                 child: Icon(Icons.person, size: 50, color: Colors.white),
               ),
               const SizedBox(height: 20),
@@ -32,18 +33,19 @@ class ProfilePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10),
-              Text(
-                "UID: ${user.uid}",
-                style: const TextStyle(fontSize: 14, color: Colors.grey),
-              ),
-              const SizedBox(height: 30),
               ElevatedButton.icon(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
+                  backgroundColor: Colors.grey[800],
                   padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                 ),
-                icon: const Icon(Icons.logout),
-                label: const Text("Logout"),
+                icon: const Icon(
+                  Icons.logout,
+                  color: Colors.white,
+                ),
+                label: const Text(
+                  "Logout",
+                  style: TextStyle(color: Colors.white),
+                ),
                 onPressed: () async {
                   await FirebaseAuth.instance.signOut();
                   Navigator.pushAndRemoveUntil(

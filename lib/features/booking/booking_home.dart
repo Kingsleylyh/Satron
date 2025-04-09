@@ -18,6 +18,7 @@ class BookingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFE4E4E4),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: GridView.count(

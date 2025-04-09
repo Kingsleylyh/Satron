@@ -67,7 +67,7 @@ Time: ${_selectedTime?.format(context)}
       builder: (context, scrollController) => Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         decoration: const BoxDecoration(
-          color: Color(0xFFE3F2FD),
+          color: Color(0xFFE8F0F4),
           borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
         ),
         child: ListView(
