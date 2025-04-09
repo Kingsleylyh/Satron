@@ -64,33 +64,6 @@ class _ScheduleHomeState extends State<ScheduleHome> {
                     letterSpacing: 1.2,
                   ),
                 ),
-                GestureDetector(
-                  onTap: () async {
-                    await FirebaseAuth.instance.signOut();
-                    Navigator.pushReplacementNamed(context,  '/login');
-                  },
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 12,
-                      vertical: 6,
-                    ),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(
-                        color: const Color(0xFFDDDDDD),
-                        width: 1,
-                      ),
-                    ),
-                    child: const Text(
-                      "Logout",
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xFF666666),
-                      ),
-                    ),
-                  ),
-                ),
               ],
             ),
           ),
