@@ -24,7 +24,6 @@ class FirebaseAuthService {
         });
 
       }
-
       return user;
     } on FirebaseAuthException catch (e) {
       print("Error during sign up: ${e.message}");
@@ -41,8 +40,6 @@ class FirebaseAuthService {
       );
 
       User? user = credential.user;
-
-
 
       return user;
     } on FirebaseAuthException catch (e) {

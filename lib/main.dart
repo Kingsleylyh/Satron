@@ -37,10 +37,12 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+
       // Splash screen as entry point
       home: const SplashScreen(
         child: LoginPage(),
       ),
+
       routes: {
         '/login': (context) => const LoginPage(),
         '/register': (context) => const RegistrationPage(),
