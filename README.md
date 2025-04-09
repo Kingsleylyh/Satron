@@ -26,7 +26,6 @@ Revolutionizing urban mobility with a centralized app. Your all-in-one solution 
    ```bash
    flutter run
 
-
 ## 🏆 Hackathon Goals
 
 What challenges does your app solve?
