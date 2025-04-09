@@ -1,16 +1,50 @@
-# satron
+# Kitahack Hackathon - Flutter Application
 
-A Map for Malaysians
+## 📌 Satron Mapping Application
+**Map For Malaysians**  
+*A simple mapping application that combines the public transportation services in Malaysia and puts it all into one application.*
 
-## Getting Started
+## 🌟 Overview
+A simple mapping application that combines the public transportation services in Malaysia and puts it all into one application. 
 
-This project is a starting point for a Flutter application.
+## 🛠 Technologies Used
+- **Flutter** 
+- **Firebase** (Authentication/Firestore/etc.)
+- **Other Packages**: http, provider, etc.
+- **APIs**: List any third-party APIs used
 
-A few resources to get you started if this is your first Flutter project:
+## 🔧 Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/your-repo.git
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+2. Install Dependencies:
+   ```bash
+   flutter pub get
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+3. Run App:
+   ```bash
+   flutter run
+
+🏆 Hackathon Goals
+What problem does your app solve for Kitahack?
+  It helps in solving Sustainable Developmental Goals
+
+How does it align with the hackathon's themes?
+
+
+👥 Team Members
+
+   [Kingsley](https://github.com/Kingsleylyh)
+   
+   [How Yong Heng](https://github.com/howyongheng0313)
+   
+   [Nicholas Pang Tze Shen](https://github.com/Fraxtal)
+   
+   [Wang Liang Xuan](https://github.com/ItsLiang62)
+
+📜 License
+This project is licensed under the MIT License (or any other license you prefer).
+
+🤝 Contributing
+Feel free to fork, open issues, or submit PRs if you'd like to improve the project!
