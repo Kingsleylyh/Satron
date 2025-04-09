@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/26f866f0-874e-4095-8fe8-95860942c275)# Kitahack Hackathon - Flutter Application
+# Kitahack Hackathon - Flutter Application
 
 ## 📌 Satron Mapping Application
 **Map For Malaysians**  
