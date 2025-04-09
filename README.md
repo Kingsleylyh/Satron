@@ -27,7 +27,7 @@ Revolutionizing urban mobility with a centralized app. Your all-in-one solution 
    flutter run
 
 
-##🏆 Hackathon Goals
+## 🏆 Hackathon Goals
 
 What challenges does your app solve?
 - Commute Frustrations - *Daily Frunstrations when commuting around Malaysia*
@@ -55,10 +55,10 @@ Which of the 17 Sustainable Developmental Goals does the app solve?
    
    [Wang Liang Xuan](https://github.com/ItsLiang62)
 
-##📜 License
+## 📜 License
 
 This project is licensed under the MIT License (or any other license you prefer).
 
-##🤝 Contributing
+## 🤝 Contributing
 
 Feel free to fork, open issues, or submit PRs if you'd like to improve the project!
