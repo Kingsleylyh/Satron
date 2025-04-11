@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:satron/pages/user_auth/login.dart';
 import 'package:satron/pages/user_auth/update_profile.dart';
 import 'package:satron/pages/user_auth/FAQs.dart';
+import 'package:satron/pages/user_auth/contactus.dart';
 import 'package:satron/features/booking/payment.dart';
 import 'package:satron/features/booking/booking_history.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -134,7 +135,13 @@ class _ProfilePageState extends State<ProfilePage> {
               );
             }),
             _buildOptionButton(context, "Livechat", () {}),
-            _buildOptionButton(context, "Contact Us", () {}),
+            _buildOptionButton(context, "Contact Us", () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ContactUsPage()),
+              );
+            }),
+
             _buildOptionButton(context, "Sign Out", () async {
               final shouldSignOut = await showDialog<bool>(
                 context: context,
