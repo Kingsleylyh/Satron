@@ -3,7 +3,6 @@ import 'package:satron/features/schedule/bus_schedule.dart';
 import 'package:satron/features/schedule/train_schedule.dart';
 import 'package:satron/features/booking/booking_home.dart';
 import 'package:satron/features/map/map_home.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:satron/pages/user_auth/profile.dart';
 
 class ScheduleHome extends StatefulWidget {
