@@ -57,7 +57,7 @@ SDG 9: Industry, Innovation, and Infrastructure
 
 ## 📜 License
 
-This project is licensed under the MIT License (or any other license you prefer).
+This project is licensed under the MIT License.
 
 ## 🤝 Contributing
 
